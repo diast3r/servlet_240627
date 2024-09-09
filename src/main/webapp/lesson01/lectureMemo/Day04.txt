@@ -1,0 +1,17 @@
+GET : request body 사용 안함, url에 쿼리 스트링 사용
+-a 태그
+-url
+-form 태그
+
+POST :request body에 정보를 담아서 보냄. url 뒤에 쿼리 스트링이 안 붙음.
+-서버 db에 정보를 저장하기 위한 메소드
+-url에 정보가 포함 안 되므로 보안이 필요한 경우에 사용.
+-get으로 하기엔 url에 너무 많은 정보가 담겨야 하는 경우에 사용.(정보가 많은 경우)
+-form 태그
+
+필터
+-request에 대해 필터링 작업을 거치고 서블릿으로 보내주는 역할. 사용자에게 응답을 보낼 때도 거침.
+-필터를 설정하면 response.setCharacterEncoding()같은 메소드 매번 사용하지 않아도 됨.
+-com.test.filter.CharacterEncodingFilter(내맘대로 이름)로 만듦.
+
+과제: github 가입, quiz08, quiz09

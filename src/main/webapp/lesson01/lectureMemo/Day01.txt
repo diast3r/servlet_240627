@@ -1,0 +1,73 @@
+tomcat : 왼쪽 download 탭에서 tomcat9 선택, core의 zip 다운로드
+이클립스 : Eclipse IDE for Enterprise Java and Web Developers 버전으로 다운로드. 압출 풀면 같은 공간에 workspace폴더 생성.
+
+1. 톰캣 - 이클립스 연동 제일먼저. 이클립스 틀고나서
+windows > Preperences > Server 메뉴 > Runtime Enviroments
+add 버튼 > Tomcat 9 버전 선택 > Browse 버튼 > 톰캣 설치 경로 선택
+마론달에서 확인.
+
+2. 프로젝트 생성
+file - new - dynamic web project
+이름 : Test, next 두 번 클릭.
+Generate web.xml deployment descriptor 버튼 무조건!!!!! 선택
+
+
+3. 프로젝트 > src > webapp > WEB-INF > web.xml 열고 아래 쪽 탭에서 source 눌러서 코드 보기.
+welcome 태그로 쓰인 거는 필요없으니 지우기.
+
+4. 패키지, 클래스 만들기:
+java resources > src/main/java에 생성.
+test.com이라는 사이트라면, com.test 패키지 생성. 이 밑에 lesson01, lesson02...이런 식으로 패키지생성.
+(com.test.lesson01 패키지 생성.)
+패키지 밑에 TestServlet 클래스 생성.(메인함수 X)
+새로운 클래스 만들었으면 항상 extends HttpServlet로 톰캣 라이브러리 상속받아서 import(ctrl+shift+o)까지하기.
+
+5. hello world 
+클래스 내에 오버라이드 추가
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		PrintWriter out = response.getWriter();
+		out.println("Hello world!");
+	}
+
+6. 서버 연동, 켜기
+이클립스 아래쪽 탭 중 servers 누르고 빈 공간에 우클릭 > new >server
+Apache > 톰캣 9.0 >next
+test 를 오른쪽으로 add하고 finish
+서버 선택하고 벌레모양(debug모드)로 서버 켜기. 항상항상항상.
+
+7.
+* http://localhost/hello path에 접속할 때 수행할 동작,servlet을 설정할 것임.
+TestServlet코드를 web.xml에 등록할 것이다.
+web.xml source코드 안쪽에 <servlet></servlet> 태그
+  <servlet>
+  	<servlet-name>TestServlet</servlet-name>
+  	<servlet-class>com.test.lesson01.TestServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TestServlet</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+
+사이트에 연결할 수 없음(화면캡처 참고): 포트번호가 잘못되거나, 서버가 안 켜져있거나.
+포트 확인: 서버를 더블클릭해서 HTTP/1.1해당하는 포트번호 확인.(보통 8080)
+
+404 : 접속은 했으나 서버에서 응답할 것을 찾을 수 없음.
+
+서버 더블클릭 -> 아래쪽탭 중 Modules 에서 Path 확인. -> /Test
+이 때 사용할 수 있는 주소: http://localhost:8080/Test/hello
+
+/Test를 생략하려면 Modules > Path > edit에서 path 내용 삭제.
+포트번호도 생락하려면 포트번호 확인하는 곳에서 8080 을 80으로 변경하면 됨.
+이제 http://localhost/hello 로 접속해도 제대로 됨.
+
+
+
+
+
+HTML 은 Tag W3C 형식을 따름.
+
+XML 은 사용자 지정 태그 사용 가능.
+XML의 규칙 정의는 .xsd파일로 정함.(알 필요 없음.)

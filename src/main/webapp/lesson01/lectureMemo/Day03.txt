@@ -1,0 +1,36 @@
+html 문서 저장하는 위치: src / main / webapp / lesson01 / ex03.html
+(lesson01 폴더 생성)
+src / main / java : 서버사이드 코드 저장함.
+src / main / webapp : 뷰 역할하는 코드(html 등) 저장.
+WEB-INF:보안 폴더. 이 안에 넣으면 접근할 수 없음.
+
+html같은 뷰파일 수정할 대는 굳이 서버를 안 꺼도 됨.(보통은)
+
+문서에 접근하는 url: http://localhost/lesson01/ex03.html
+
+
+
+request method의 종류(면접에도 아주 많이 나옴)
+1. get method
+-브라우저 주소를 통해 접속
+-a 태그
+-form 태그
+
+/lesson01/ex03?user_id=mmm
+=> 쿼리 스트링
+=> user_id: Request Parameter명
+
+2. post
+
+<디버깅>
+디버깅 할 때 변수값 보는 창 띄우기
+window - show - variables(맨 아래)
+
+Response 타입
+- text/plain
+- text/html
+- text/json => json string 자바스크립트 모양을 본따 key=value 쌍으로 이루어짐.
+	{"키":"값", "키1":20} : 단건
+	[{"키":"값", "키1":20}, {"키":"값", "키1":20}] : 여러건
+
+크롬 확장프로그램 -> json view 설치.
