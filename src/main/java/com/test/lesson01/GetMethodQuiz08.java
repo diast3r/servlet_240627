@@ -51,15 +51,18 @@ public class GetMethodQuiz08 extends HttpServlet {
 		for (int i = 0; i < list.size(); i++) {
 			String text = list.get(i);
 			if (text.contains(keyword)) { // keyword를 포함하면 출력.
-				// split()으로 출력
-//				String[] textArr = text.split(keyword);
-//				for (int j = 0; j < (textArr.length - 1); j++) {
-//					out.print(textArr[j]);
+				// 1) replace()로 출력
+				out.print(text.replace(keyword, "<b>" + keyword + "</b>") + "<br>");
+				
+				// 2) split()으로 출력
+//				String[] words = text.split(keyword);
+//				for (int j = 0; j < (words.length - 1); j++) {
+//					out.print(words[j]);
 //					out.print("<b>" + keyword + "</b>");
 //				}
-//				out.print(textArr[(textArr.length - 1)] + "<br>");
+//				out.print(words[(words.length - 1)] + "<br>");
 				
-				// substring()으로 출력
+				// 3) substring()으로 출력
 //				int index = text.indexOf(keyword); // keyword가 검색된 위치.
 //				int printedIndex = 0; // 어디까지 출력했는지
 //				while (index >= 0) {
@@ -69,9 +72,6 @@ public class GetMethodQuiz08 extends HttpServlet {
 //					index = text.indexOf(keyword, index + 1);
 //				}
 //				out.println(text.substring(printedIndex, text.length()) + "<br>");
-				
-				// replace()로 출력
-				out.print(text.replace(keyword, "<b>" + keyword + "</b>") + "<br>");
 			}
 		}
 		

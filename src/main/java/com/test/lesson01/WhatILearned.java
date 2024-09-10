@@ -38,8 +38,8 @@ public class WhatILearned extends HttpServlet {
 		
 		// lesson01-Day01
 		out.println("<h2>Day01</h2>");
-		out.println("<a href=\"/lesson01/lectureMemo/Day01.txt\" target=\"_blank\">Memo</a><br>");
-		out.println("<a href=\"/lesson01/lectureMemo/img/사이트에 연결할 수 없음.png\" target=\"_blank\">화면 캡처</a>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/Day01.txt\" target=\"_blank\">Memo</a></li>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/img/사이트에 연결할 수 없음.png\" target=\"_blank\">화면 캡처</a></li>");
 		out.println("<li><a href=\"/hello\">Hello world!</a></li>");
 		
 		// lesson01-Day02
@@ -56,32 +56,29 @@ public class WhatILearned extends HttpServlet {
 		out.println("<li><a href=\"/lesson01/quiz04\">/lesson01/quiz04</a></li>");
 		out.println("</ul>");
 		
-		
+		// lesson01-Day03
 		out.println("<h2>Day03</h2>");
-		out.println("<a href=\"/lesson01/lectureMemo/Day03.txt\" target=\"_blank\">Memo</a>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/Day03.txt\" target=\"_blank\">Memo</a></li>");
 		out.println("<li><a href=\"/lesson01/ex03.html\">/lesson01/ex03.html</a></li>");
 		out.println("<ul>");
 		out.println("<li><a href=\"/lesson01/quiz05.html\">/lesson01/quiz05.html</a></li>");
 		out.println("<li><a href=\"/lesson01/quiz06.html\">/lesson01/quiz06.html</a></li>");
 		out.println("</ul>");
 		
-		
+		// lesson01-Day04
 		out.println("<h2>Day04</h2>");
-		out.println("<a href=\"/lesson01/lectureMemo/Day04.txt\" target=\"_blank\">Memo</a>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/Day04.txt\" target=\"_blank\">Memo</a></li>");
 		out.println("<li><a href=\"/lesson01/ex04.html\">/lesson01/ex04.html</a></li>");
 		out.println("<ul>");
 		out.println("<li><a href=\"/lesson01/quiz07.html\">/lesson01/quiz07.html</a></li>");
-		out.println("<li><a href=\"/lesson01/quiz08.html\">/lesson01/quiz08.html</a>(과제)</li>");
-		out.println("<li><a href=\"/lesson01/quiz09.html\">/lesson01/quiz09.html</a>(과제)</li>");
 		out.println("</ul>");
 		out.println("<li><a href=\"/lesson01/ex05.html\">/lesson01/ex05.html</a></li>");
 		
-		out.println("<h2>Day05</h2>");
-		out.println("<a href=\"/lesson01/lectureMemo/Day05.txt\" target=\"_blank\">Memo</a>");
-		out.println("<li>/lesson01/quiz08.html</li>");
-		out.println("<li>/lesson01/quiz09.html</li>");
-		out.println("<li>/lesson01/quiz010.html</li>");
-//		out.println("<li><a href=\"/lesson01/quiz010\">/lesson01/quiz10</a></li>");
+		// lesson01-Day06
+		out.println("<h2>Day06</h2>");
+		out.println("<li><a href=\"/lesson01/quiz08.html\">/lesson01/quiz08.html</a>(과제)</li>");
+		out.println("<li><a href=\"/lesson01/quiz09.html\">/lesson01/quiz09.html</a>(과제)</li>");
+		out.println("<li><a href=\"/lesson01/quiz10.html\">/lesson01/quiz10</a></li>");
 		
 		out.println("<ul>");
 		out.println("</div>");
@@ -93,8 +90,14 @@ public class WhatILearned extends HttpServlet {
 		
 		// 형상관리-Day05
 		out.println("<h2>Day05</h2>");
-		out.println("Day05.txt<br>");
-		out.println("화면 캡처");
+		out.println("<li><a href=\"/lesson01/lectureMemo/Github.txt\" target=\"_blank\">Github.txt</a></li>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/형상관리 주의점.txt\" target=\"_blank\">형상관리 주의점.txt</a></li>");
+		
+		// 형상관리-Day06
+		out.println("<h2>Day06</h2>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/Github2.txt\" target=\"_blank\">Github2.txt</a></li>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/형상관리 주의점2.txt\" target=\"_blank\">형상관리 주의점2.txt</a></li>");
+		
 		out.println("</ul>");
 		out.println("</div>");
 		
@@ -104,10 +107,9 @@ public class WhatILearned extends HttpServlet {
 		out.println("<h1><a href=\"http://marondal.com/lesson/example_list?lessonId=10261&lectureId=10007&lectureListId=10093\">lesson02</a></h1>");
 		
 		// lesson02-Day06
-//		out.println("<h2>Day06</h2>");
-		out.println("<a href=\"/lesson01/lectureMemo/Day03.txt\" target=\"_blank\">Day05.txt</a>");
-		out.println("<li>/lesson01/quiz09.html</li>");
-		out.println("<li>/lesson01/quiz010.html</li>");
+		out.println("<h2>Day06</h2>");
+		out.println("<li><a href=\"/lesson02/ex01.jsp\" target=\"_blank\">ex01.jsp</a></li>");
+		out.println("<li><a href=\"/lesson02/quiz01.jsp\" target=\"_blank\">quiz01.jsp</a></li>");
 		
 		out.println("</ul>");
 		out.println("</div>");
