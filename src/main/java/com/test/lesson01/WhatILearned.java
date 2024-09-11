@@ -40,6 +40,7 @@ public class WhatILearned extends HttpServlet {
 		out.println("<h2>Day01</h2>");
 		out.println("<li><a href=\"/lesson01/lectureMemo/Day01.txt\" target=\"_blank\">Memo</a></li>");
 		out.println("<li><a href=\"/lesson01/lectureMemo/img/사이트에 연결할 수 없음.png\" target=\"_blank\">화면 캡처</a></li>");
+		out.println("<li><a href=\"/lesson01/lectureMemo/img/문과형 학생의 후기.jpg\" target=\"_blank\">문과형 학생의 후기</a></li>");
 		out.println("<li><a href=\"/hello\">Hello world!</a></li>");
 		
 		// lesson01-Day02
@@ -76,9 +77,9 @@ public class WhatILearned extends HttpServlet {
 		
 		// lesson01-Day06
 		out.println("<h2>Day06</h2>");
-		out.println("<li><a href=\"/lesson01/quiz08.html\">/lesson01/quiz08.html</a>(과제)</li>");
-		out.println("<li><a href=\"/lesson01/quiz09.html\">/lesson01/quiz09.html</a>(과제)</li>");
-		out.println("<li><a href=\"/lesson01/quiz10.html\">/lesson01/quiz10</a></li>");
+		out.println("<li><a href=\"/lesson01/quiz08.html\">/lesson01/quiz08.html</a></li>");
+		out.println("<li><a href=\"/lesson01/quiz09.html\">/lesson01/quiz09.html</a></li>");
+		out.println("<li><a href=\"/lesson01/quiz10.html\">/lesson01/quiz10.html</a></li>");
 		
 		out.println("<ul>");
 		out.println("</div>");
@@ -90,6 +91,7 @@ public class WhatILearned extends HttpServlet {
 		
 		// 형상관리-Day05
 		out.println("<h2>Day05</h2>");
+		out.println("<li><a href=\"/lesson02/lectureMemo/img/Git 흐름.jpg\" target=\"_blank\">Git 흐름</a></li>");
 		out.println("<li><a href=\"/lesson01/lectureMemo/Github.txt\" target=\"_blank\">Github.txt</a></li>");
 		out.println("<li><a href=\"/lesson01/lectureMemo/형상관리 주의점.txt\" target=\"_blank\">형상관리 주의점.txt</a></li>");
 		
@@ -109,7 +111,26 @@ public class WhatILearned extends HttpServlet {
 		// lesson02-Day06
 		out.println("<h2>Day06</h2>");
 		out.println("<li><a href=\"/lesson02/ex01.jsp\" target=\"_blank\">ex01.jsp</a></li>");
+		out.println("<ul>");
 		out.println("<li><a href=\"/lesson02/quiz01.jsp\" target=\"_blank\">quiz01.jsp</a></li>");
+		out.println("</ul>");
+		
+		// lesson02-Day07
+		out.println("<h2>Day07</h2>");
+		out.println("<li><a href=\"/lesson02/lectureMemo/서버 오류번호.txt\" target=\"_blank\">Memo</a></li>");
+		out.println("<li><a href=\"/lesson02/ex02.jsp\" target=\"_blank\">ex02.jsp</a></li>");
+		out.println("<ul>");
+		out.println("<li><a href=\"/lesson02/quiz02.jsp\" target=\"_blank\">quiz02.jsp</a></li>");
+		out.println("<li><a href=\"/lesson02/quiz03.jsp\" target=\"_blank\">quiz03.jsp</a></li>");
+		out.println("</ul>");
+		
+		
+		// lesson02-Day08
+		out.println("<h2>Day08(예정)</h2>");
+		out.println("<li><a href=\"/lesson02/ex03.jsp\" target=\"_blank\">ex03.jsp</a></li>");
+		out.println("<ul>");
+		out.println("</ul>");
+		
 		
 		out.println("</ul>");
 		out.println("</div>");
