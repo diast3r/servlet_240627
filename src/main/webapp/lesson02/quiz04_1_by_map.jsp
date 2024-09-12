@@ -12,37 +12,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-	
-	<% // 학원 풀이	
-		int length = Integer.parseInt(request.getParameter("length"));
-		String[] types = request.getParameterValues("type");
-	%>
-	<div>
-		<h1>길이 변환 결과</h1>
-		<h3><%= length %>cm</h3>
+	<div class="container">
+		<h2>길이 변환 결과</h2>
+		<%	// 집에서 다시 풀어보기(맵과 리스트 이용해서)
+			int length = Integer.parseInt(request.getParameter("length"));
+		%>
+		<h2><%= length + " cm" %></h2>
+		<hr>
+		<%
+			List<String> checked = new ArrayList<>() ;
+			Map<String, Double> ratios = new HashMap<>();
+			ratios.put("inch", 0.393701);
+			ratios.put("yard", 0.01093613888889);
+			ratios.put("feet", 0.032808416666669996953);
+			ratios.put("meter", 0.01);
+			String[] types = request.getParameterValues("type");
+			
+			
+			
+			double ratio;
+			for (int i = 0; i < types.length; i++) {
+				ratio = ratios.get(types[i]);
+		%>
 		
-		<h2>
-			<%
-			if (types != null) {
-				for (int i = 0; i < types.length; i++) {
-					if (types[i].equals("inch")) {
-						double inch = length * 0.393701;
-						out.println(inch + "in<br>");
-					} else if (types[i].equals("yard")) {
-						double yard = length * 0.01093613888889;
-						out.println(yard + "yd<br>");
-					} else if (types[i].equals("feet")) {
-						double feet = length * 0.032808416666669996953;
-						out.println(feet + "in<br>");
-					} else if (types[i].equals("meter")) {
-						double meter = length * 0.01;
-						out.println(meter + "m");
-					}
-					
-				}
+		<h2><%= length * ratio + " " + types[i] %></h2>
+	
+		<%
 			}
-			%>
-		</h2>
-	</div>
+		%>
+	</div>	
+	
 </body>
 </html>
