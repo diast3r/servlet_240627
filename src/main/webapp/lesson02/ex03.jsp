@@ -11,7 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-	<form method="post" action="/lessson02/ex03_1.jsp">
+	<form method="post" action="/lesson02/ex03_1.jsp">
 		1. 별명은 무엇입니까?
 		<input type="text" name="nickname"><br><br>
 		2. 취미는 무엇입니까?
@@ -25,7 +25,18 @@
 		<label>민트초코<input type="checkbox" name="food" value="mincho"></label>
 		<label>하와이안 피자<input type="checkbox" name="food" value="pizza"></label>
 		<label>번데기<input type="checkbox" name="food" value="pupa"></label>
+		<br><br>
 		
+		5. 좋아하는 과일을 선택하세요.<br>
+		<select name="fruit">
+			<option>사과</option>
+			<option>복숭아</option>
+			<option>파인애플</option>
+			<option>체리</option>
+			<option>참외</option>
+		</select><br><br>
+		
+		<input type="submit" value="제출">
 	</form>
 </body>
 </html>
