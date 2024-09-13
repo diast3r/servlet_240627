@@ -29,13 +29,11 @@
 	    map = new HashMap<String, Object>() {{ put("name", "반올림피자"); put("menu", "피자"); put("point", 4.3); } };
 	    list.add(map);
 	    
-	    String menu = request.getParameter("menu");
-	    String over4Point = request.getParameter("over4Point");
 	%>
 	
-	<div class="container text-center">
-		<h2>검색 결과</h2>
-		<table class="table">
+	<div class="container">
+		<h2 class="text-center">검색 결과</h2>
+		<table class="table text-center">
 			<thead>
 				<tr>
 					<th>메뉴</th>
@@ -45,23 +43,36 @@
 			</thead>
 			<tbody>
 				<%
-					for (int i = 0; i < list.size(); i++) {
-						if (list.get(i).get("menu").equals(menu) == false) {
-							continue;
-						}
-						if (over4Point != null) {
-							if ((double)list.get(i).get("point") < 4.0) {
+				    String menu = request.getParameter("menu");
+				    String filter = request.getParameter("overPoint4");
+				    boolean exclude = filter != null;	// true:제외(체크됨)
+				    
+					for (Map<String, Object> item : list) {
+						if (menu.equals(item.get("menu"))) {
+							// skip 조건: 체크가 되어 있고, 4.0 이하인 조건
+							if (exclude && (double)item.get("point") < 4.0) { // downcasting.
 								continue;
 							}
+								
+								
+								
+								
+						/* if (item.get("menu").equals(menu) == false) {
+							continue;
 						}
+						if (filter != null) {
+							if ((double)item.get("point") < 4.0) {
+								continue;
+							}
+						} */
 				%>
-				<tr>
-					<td class="col-4"><%= list.get(i).get("menu") %></td>
-					<td class="col-4"><%= list.get(i).get("name") %></td>
-					<td class="col-4"><%= list.get(i).get("point") %></td>
-				</tr>
+					<tr>
+						<td><%= item.get("menu") %></td>
+						<td><%= item.get("name") %></td>
+						<td><%= item.get("point") %></td>
+					</tr>
 				<%
-						
+						}
 					}
 				%>
 			</tbody>

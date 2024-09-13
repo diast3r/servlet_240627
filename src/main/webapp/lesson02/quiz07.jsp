@@ -13,12 +13,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <body>
 	<div class="container">
-		<form method="get" action="/lesson02/quiz07_1.jsp">
-			<h1>메뉴 검색</h1>
-			<div class="d-flex align-items-center">
-				<input type="text" name="menu" class="form-control col-3 mr-2">
-				<label class="mb-0"><input type="checkbox" name="over4Point"> 4점 이하 제외</label>
-			</div>
+		<!-- db에 작성하는 게 아니기 때문에 조회하는 것이기 때문에 get메소드를 사용해도 상관없음. -->
+		<h1>메뉴 검색</h1>
+			<form method="get" action="/lesson02/quiz07_1.jsp">
+				<div class="d-flex align-items-center">
+					<input type="text" name="menu" class="form-control col-3 mr-3">
+					<label class="m-0">
+						<input type="checkbox" name="overPoint4" value="true">
+						<span class="ml-1">4점 이하 제외</span>
+					</label>
+				</div>
 			<input type="submit" value="검색" class="btn btn-success mt-3">
 		</form>
 	</div>
