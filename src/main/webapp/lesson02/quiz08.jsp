@@ -74,9 +74,9 @@
 					//반복문 시작
 					for (Map<String, Object> book : list) {
 				%>
-					<tr>
-						<td class="col-2"><%= book.get("id") %></td>
-						<td class="col-2"><img src="<%= book.get("image") %>" alt="책표지" width="50"></td>
+					<tr class="">
+						<td class="col-1"><%= book.get("id") %></td>
+						<td class="col-1"><img src="<%= book.get("image") %>" alt="책표지" width="50"></td>
 						<td class="col-6"><a href="/lesson02/quiz08_1.jsp?id=<%= book.get("id") %>"><%= book.get("title") %></a></td>
 					</tr>
 				
