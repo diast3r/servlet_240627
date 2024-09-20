@@ -1,0 +1,12 @@
+db-톰캣 연동 환경세팅
+1. 마론달 강의자료에서 다운로드 링크 누르고
+2. connector/j버전 들어가서
+platform independent 선택 후 zip 다운로드
+압축 풀었으면 안에 있는 mysql-connector-j-9.0.0.jar 파일 복사
+3. 톰캣 서버 설치된 폴더 -> lib 폴더 들어가서 붙여넣기.
+
+
+com.test.common 패키지에 MysqlService 클래스 생성
+
+디자인패턴 - Singleton 배우기
+신입 개발자는 디자인패턴에 대해 깊게 공부할 필요가 없지만, 싱글턴은 알아야 함.
