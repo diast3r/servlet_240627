@@ -62,22 +62,22 @@
 			<nav class="bg-danger">
 				<ul class="nav justify-content-around">
 					<li class="nav-item">
-						<a class="nav-link" href="/template/quiz09.jsp">전체</a>
+						<a class="nav-link" href="/lesson02/quiz09.jsp">전체</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/template/quiz09.jsp?category=tvShow">지상파</a>
+						<a class="nav-link" href="/lesson02/quiz09.jsp?category=tvShow">지상파</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/template/quiz09.jsp?category=drama">드라마</a>
+						<a class="nav-link" href="/lesson02/quiz09.jsp?category=drama">드라마</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/template/quiz09.jsp?category=entertainment">예능</a>
+						<a class="nav-link" href="/lesson02/quiz09.jsp?category=entertainment">예능</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/template/quiz09.jsp?category=movie">영화</a>
+						<a class="nav-link" href="/lesson02/quiz09.jsp?category=movie">영화</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/template/quiz09.jsp?category=sports">스포츠</a>
+						<a class="nav-link" href="/lesson02/quiz09.jsp?category=sports">스포츠</a>
 					</li>
 				</ul>
 			</nav>
