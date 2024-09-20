@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Melong2</title>
+<title>Melong_Answer</title>
 <!-- bootstrap -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -110,7 +110,7 @@ footer {height:200px;}
 			<div class="search col-5">
 				<form method="get" action="/lesson02/quiz10_answer2.jsp">
 					<div class="input-group">
-					  <input type="text" class="form-control" name="search">
+					  <input type="text" class="form-control" name="title">
 					  <div class="input-group-append">
 					  	<button class="btn btn-info" type="submit">검색</button>
 					  </div>
