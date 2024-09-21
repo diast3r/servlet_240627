@@ -35,7 +35,7 @@ public class MysqlService { // db에 접속하는 역할을 하는 객체.
 	}
 	
 	// DB connect
-	// 오류가 발생하면 연결을 관리한 자기의 잘못이므로 try-catch로 처리.
+	// 여기서 오류가 발생하면 연결을 관리한 자기의 잘못이므로 try-catch로 처리.
 	public void connect() {
 		try {
 			// 1. 드라이버 메모리에 로딩
@@ -67,7 +67,7 @@ public class MysqlService { // db에 접속하는 역할을 하는 객체.
 	
 	// R (read)
 	// 서버로 쿼리를 보내 결과를 받아오는 역할.
-	// 잘못된 쿼리를 보낸 것은 서블릿의 잘못이므로 throws로 처리.
+	// 오류가 발생하는 것은 잘못된 쿼리를 보낸 서블릿의 잘못이므로 해당 서블릿이 처리하도록 throws로 처리.
 	public ResultSet select(String query) throws SQLException {
 		res = statement.executeQuery(query);
 		return res;
