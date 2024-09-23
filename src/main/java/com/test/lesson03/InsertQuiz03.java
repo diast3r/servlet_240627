@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.test.common.MysqlService;
 
-@WebServlet("/lesson03/upload")
-public class Quiz03 extends HttpServlet {
+@WebServlet("/lesson03/insert_quiz03")
+public class InsertQuiz03 extends HttpServlet {
 	@Override
-	public void doPost(HttpServletRequest request, HttpServletResponse response) {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/plain");
 		
 		MysqlService ms = MysqlService.getInstance();
@@ -26,23 +26,21 @@ public class Quiz03 extends HttpServlet {
 		String pictureUrl = request.getParameter("pictureUrl");
 		if (request.getParameter("pictureUrl").equals("")) {
 			pictureUrl = "null"; 
-		};
+		} else {
+			pictureUrl = "'" + pictureUrl + "'";
+		}
 		
 		String insertQuery = "insert into used_goods "
 				+ "(`sellerId`, `title`, `price`, `description`, `pictureUrl`) "
 				+ "values "
-				+ "(" + sellerId + ", " + title + ", " + price + ", " + description + ", " + pictureUrl + ")";
+				+ "(" + sellerId + ", '" + title + "', " + price + ", '" + description + "', " + pictureUrl + ")";
 		try {
 			ms.update(insertQuery);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-		try {
-			response.sendRedirect("/lesson03/quiz03.jsp");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		response.sendRedirect("/lesson03/quiz03.jsp");
 		
 		ms.disconnect();
 	}

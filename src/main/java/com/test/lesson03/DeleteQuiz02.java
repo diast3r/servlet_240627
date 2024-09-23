@@ -10,13 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.test.common.MysqlService;
 
-@WebServlet("/lesson03/deleteBookmark")
-public class Quiz02 extends HttpServlet {
+@WebServlet("/lesson03/delete_quiz02")
+public class DeleteQuiz02 extends HttpServlet {
 	
 	@Override
-	public void doPost(HttpServletRequest request, HttpServletResponse response) {
-//		response.setContentType("text/html");
-		String id = request.getParameter("id");
+	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+		int id = Integer.valueOf(request.getParameter("id"));
 		String deleteQuery = "delete from `bookmark` "
 				+ "where `id` = " + id;
 		

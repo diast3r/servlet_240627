@@ -42,7 +42,7 @@
 		<section class="contents mt-3">
 			<div class="container">
 				<div class="display-4 my-4">물건 올리기</div>
-				<form method="post" action="/lesson03/upload">
+				<form method="post" action="/lesson03/insert_quiz03">
 					<%-- 아이디, 제목, 가격 --%>
 					<div class="d-flex justify-content-between">
 						<%-- 아이디 --%>

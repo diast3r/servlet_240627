@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.test.common.MysqlService;
 
-@WebServlet("/lesson03/addBookmark")
-public class Quiz02_1 extends HttpServlet {
+@WebServlet("/lesson03/insert_quiz02")
+public class InsertQuiz02 extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) {		
 		String name = request.getParameter("name");
@@ -20,9 +20,9 @@ public class Quiz02_1 extends HttpServlet {
 		MysqlService ms = MysqlService.getInstance();
 		ms.connect();
 		
-		String inserQuery = "insert into `bookmark` (`name`, `url`) values ('" + name + "', '" + url + "')";
+		String insertQuery = "insert into `bookmark` (`name`, `url`) values ('" + name + "', '" + url + "')";
 		try {
-			ms.update(inserQuery);
+			ms.update(insertQuery);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

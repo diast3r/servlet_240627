@@ -26,13 +26,13 @@
 		<thead>
 			<tr>
 				<th>사이트</th>
-				<th>url</th>
+				<th>사이트 주소</th>
 			</tr>
 		</thead>
 		<tbody>
 		<%
 			// 북마크 조회
-			ResultSet res = ms.select("select `id`, `name`, `url` from `bookmark`");
+			ResultSet res = ms.select("select * from bookmark order by `id` desc");
 			while (res.next()) {
 				
 		%>
@@ -40,10 +40,7 @@
 				<td><%= res.getString("name") %></td>
 				<td><a href="<%= res.getString("url") %>"><%= res.getString("url") %></a></td>
 				<td>
-					<form method="post" action="/lesson03/deleteBookmark">
-						<input type="hidden" name="id" value="<%= res.getString("id") %>">
-						<button type="submit" class="btn btn-danger">삭제</button>
-					</form>
+					<a href="/lesson03/delete_quiz02?id=<%= res.getString("id") %>">삭제</a>
 				</td>
 			</tr>
 		<%
