@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<h1>즐겨찾기 추가</h1>
-		<form method="post" action="/lesson03/insert_quiz02">
+		<form method="post" action="/lesson03/quiz02_insert">
 			<span>사이트명:</span>
 			<input type="text" name="name" class="form-control col-4">
 			<span>사이트 주소:</span>

@@ -14,11 +14,11 @@
 </head>
 <body>
 <%
-	// 연결
+	// DB 연결
 	MysqlService ms = MysqlService.getInstance();
 	ms.connect();
 	
-	
+	// select
 	
 
 %>
@@ -27,6 +27,7 @@
 			<tr>
 				<th>사이트</th>
 				<th>사이트 주소</th>
+				<th>삭제</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -40,7 +41,7 @@
 				<td><%= res.getString("name") %></td>
 				<td><a href="<%= res.getString("url") %>"><%= res.getString("url") %></a></td>
 				<td>
-					<a href="/lesson03/delete_quiz02?id=<%= res.getString("id") %>">삭제</a>
+					<a href="/lesson03/quiz02_delete?id=<%= res.getString("id") %>" class="btn btn-danger">삭제</a>
 				</td>
 			</tr>
 		<%
@@ -50,6 +51,7 @@
 		
 	</table>
 <%
+	// DB 연결 해제
 	ms.disconnect();
 %>
 	
